@@ -28,12 +28,13 @@ export const sendMessage = async (data) => {
 
 }
 
-export const postFormData = async ( formData) => {
+export const postFormData = async (formData) => {
   
   let result = await fetch('http://165.22.209.216:5005/webhooks/rest/webhook', {
     method: "POST",
     body: formData
   }) 
-    return await result.json()
+     await result.json()
+     console.log(result)
   
 }

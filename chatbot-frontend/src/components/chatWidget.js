@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {Launcher} from 'react-chat-window'
-import {sendMessage} from '../network/message'
+import {sendMessage, postFormData} from '../network/message'
 
 const sender = Date.now().toString()
 
@@ -33,9 +33,9 @@ const Demo = () =>{
   const onFilesSelected = async(fileList) =>{
     console.log(fileList[0])
     const formData = new FormData();
-    formData.append("file", fileList[0]);
+    formData.append("message", fileList[0]);
     formData.append("sender", sender)
-    sendMessageToServer(formData)
+    postFormData(formData)
 
   }
     return (<div>
