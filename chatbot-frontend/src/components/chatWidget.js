@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {Launcher} from 'react-chat-window'
 import {sendMessage, postFormData} from '../network/message'
-
+import {getS3, uploadFileToAws} from '../network/aws'
 const sender = Date.now().toString()
 
 const Demo = () =>{
@@ -32,10 +32,8 @@ const Demo = () =>{
   
   const onFilesSelected = async(fileList) =>{
     console.log(fileList[0])
-    const formData = new FormData();
-    formData.append("message", fileList[0]);
-    formData.append("sender", sender)
-    postFormData(formData)
+    let updatedName= Date.now().toString()
+    uploadFileToAws(updatedName, fileList[0])
 
   }
     return (<div>
