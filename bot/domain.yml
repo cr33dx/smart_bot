@@ -8,20 +8,40 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-
+  - capabilities
+  - test
+  - whatsname
+  - whomade
+actions:
+  - action_test
 responses:
+  utter_name:
+  - text: "Hi My Name Is Grizz Bot 🐻"
+  
+  utter_whomade:
+  - text: "I was made by Lakshya & Shashwat"
+
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hey! Welcome To Grizz Bot How are you?"
 
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
+  - text: "Here is something to cheer you up 😃"
     image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
-  - text: "Did that help you?"
+  - text: "So now that you must be happy, what can i do for you?"
+
+  utter_sendpic:
+  - text: "You can drag-drop or upload the picture in the chat area"
+
+  utter_affirm:
+  - text: "okay"
 
   utter_happy:
-  - text: "Great, carry on!"
+  - text: "Good to hear that,"
+
+  utter_capabilities:
+  - text: "If you send me a picture of Bear I can Help you identify & give you facts about it"
 
   utter_goodbye:
   - text: "Bye"
