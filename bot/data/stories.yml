@@ -1,13 +1,33 @@
 version: "2.0"
+rules:
+- rule: conversation start
+  conversation_start: true
+  steps:
+  - intent: greet
+  - action: utter_greet
+- rule: Say bot name 
+  steps:
+  - intent: whatsname
+  - action: utter_name
+- rule: who made you?
+  steps:
+  - intent: whomade
+  - action: utter_whomade
+- rule: capabilities
+  steps:
+  - intent: capabilities
+  - action: utter_capabilities
 
 stories:
-
-- story: happy path
+- story: happy path 1
   steps:
   - intent: greet
   - action: utter_greet
   - intent: mood_great
   - action: utter_happy
+  - action: utter_capabilities
+  - intent: affirm
+  - action: utter_sendpic
 
 - story: sad path 1
   steps:
@@ -16,8 +36,9 @@ stories:
   - intent: mood_unhappy
   - action: utter_cheer_up
   - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - action: utter_capabilities
+  - action: utter_sendpic
+
 
 - story: sad path 2
   steps:

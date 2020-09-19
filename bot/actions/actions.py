@@ -9,8 +9,8 @@
 
 # from typing import Any, Text, Dict, List
 #
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
 #
 #
 # class ActionHelloWorld(Action):
@@ -25,3 +25,10 @@
 #         dispatcher.utter_message(text="Hello World!")
 #
 #         return []
+
+class ActionTest(Action):
+
+    def name(self):
+        return 'action_test'
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_message(text = "hello from test")
