@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import {Launcher} from 'react-chat-window'
-import {sendMessage, postFormData} from '../network/message'
-import {getS3, uploadFileToAws} from '../network/aws'
+import {Launcher} from 'react-chat-window-with-image-view'
+import {sendMessage} from '../network/message'
+import {ReactS3Client} from '../network/aws'
 const sender = Date.now().toString()
 
 const Demo = () =>{
@@ -18,7 +18,6 @@ const Demo = () =>{
   }
  
   const sendMessageToServer= async(data) => {
-    console.log(JSON.stringify(data))
     const response = await sendMessage(data)
     let responseMessage= {
       author: 'them',
@@ -31,10 +30,22 @@ const Demo = () =>{
   }
   
   const onFilesSelected = async(fileList) =>{
-    console.log(fileList[0])
     let updatedName= Date.now().toString()
-    uploadFileToAws(updatedName, fileList[0])
-
+    const reponse= await ReactS3Client.uploadFile(fileList[0], updatedName)
+    let imageMessage= {
+      author: 'me',
+      type: 'file',
+      data: {
+        url: reponse.location,
+        fileName: 'name'
+      }
+    }
+    messageList.push(imageMessage)
+    const data={
+      "sender": sender ,
+      "message": reponse.location
+    }
+    sendMessageToServer(data)
   }
     return (<div>
       <Launcher

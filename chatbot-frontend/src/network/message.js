@@ -4,7 +4,6 @@ export const sendMessage = async (data) => {
       method: 'POST',
       body: JSON.stringify(data),
       mode: 'cors',
-      
       headers: {
           'Content-Type': 'application/json',
       }
@@ -28,13 +27,3 @@ export const sendMessage = async (data) => {
 
 }
 
-export const postFormData = async (formData) => {
-  
-  let result = await fetch('http://165.22.209.216:5005/webhooks/rest/webhook', {
-    method: "POST",
-    body: formData
-  }) 
-     await result.json()
-     console.log(result)
-  
-}
