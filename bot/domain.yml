@@ -19,7 +19,7 @@ responses:
   - text: "Hi My Name Is Grizz Bot 🐻"
   
   utter_whomade:
-  - text: "I was made by Lakshya & Shashwat"
+  - text: "I was made by Lakshya & Shashwat & Simran"
 
   utter_greet:
   - text: "Hey! Welcome To Grizz Bot How are you?"
