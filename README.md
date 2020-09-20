@@ -8,4 +8,4 @@ Technologies used: HTML, CSS, RASA, Gatsby, Amazon AWS cloud, and Convolutional 
 
 Here's a walkthrough of the application:
 
-(insert GIF)
+<img src='https://github.com/cr33dx/smart_bot/blob/master/Gif.gif' title='Video Walkthrough' width='' alt='Gif Video Walkthrough of the application' />
