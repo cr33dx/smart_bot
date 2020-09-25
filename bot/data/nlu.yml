@@ -1,0 +1,151 @@
+version: "2.0"
+
+nlu:
+- intent: facts
+  examples: |
+    - Tell me something about [grizzly]("bear") bear
+    - Facts about [grizzly]("bear") bear
+    - Some facts about [grizzly]("bear") bear
+    - Tell me something about [panda]("bear") bear
+    - Facts about [panda]("bear") bear
+    - Some facts about [panda]("bear") bear
+    - Tell me something about [sun]("bear") bear
+    - Facts about [sun]("bear") bear
+    - Some facts about [sun]("bear") bear
+    - Tell me something about [polar]("bear") bear
+    - Facts about [polar]("bear") bear
+    - Some facts about [polar]("bear") bear
+- intent: images
+  examples: |
+    - https://bearopedia.s3-us-west-2.amazonaws.com/1600582236427.jpeg
+    - https://bearopedia.s3-us-west-2.amazonaws.com/1600582233052.jpeg
+    - https://bearopedia.s3-us-west-2.amazonaws.com/1600582229402.jpeg
+    - https://bearopedia.s3-us-west-2.amazonaws.com/1600582226129.jpeg
+    - https://bearopedia.s3-us-west-2.amazonaws.com/1600582223358.jpeg 
+
+- intent: test
+  examples: |
+    - test
+    - this is test
+    - are you test
+    - test test test
+
+- intent: whatsname
+  examples: |
+    - what's your name?
+    - name?
+    - what should i call you?
+    - what's your good name?
+    - what do people know you as?
+    - what do people call you?
+
+- intent: whomade
+  examples: |
+    - who made you?
+    - who's your dad?
+    - who's your creator?
+    - which team made you?
+
+- intent: affirm
+  examples: |
+    - ok
+    - got it
+    - yes
+    - yeah
+    - i will
+    - assert
+    - confirm
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: capabilities
+  examples: |
+    - what can you do?
+    - can you do this?
+    - can you help me?
+    - can you do this?
+    - what more can you do?
+    - what else can you do?

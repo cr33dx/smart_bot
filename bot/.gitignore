@@ -1,0 +1,3 @@
+models/
+.DS_Store
+actions/__pycache__
